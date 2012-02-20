@@ -28,13 +28,20 @@ switch ($action){
         $like_id = $_POST['like_id'];
         disapproveLikeToTag($like_id, $tag_id);
         break;
+
+    case 'skip':
+        $tag_id = $_POST['tag_id'];
+        $like_id = $_POST['like_id'];
+        skipLikeToTag($like_id,$tag_id);
+        break;
+
 }
 
 //DB function to get all tags from list
 function getAllTags(){
 
     global $mysqli;
-    if ($result = $mysqli->query("SELECT * FROM tags")) {
+    if ($result = $mysqli->query("SELECT * FROM tags where approved>=0")) {
    		if ($result->num_rows < 1)  echo "false";
 
            while ($row = $result->fetch_assoc()) {
@@ -92,6 +99,17 @@ function disapproveLikeToTag($like_id,$tag_id){
 
 
 }
+
+function skipLikeToTag($like_id,$tag_id){
+    global $mysqli;
+     $query = "update likes_tags_relations set approved=-2 where like_id=".$like_id . " and tag_id=" . $tag_id;
+
+     if ($mysqli->query($query)) echo "true";
+     else echo "false";
+
+
+}
+
 
 function getLikesPerTag($tag_id){
 

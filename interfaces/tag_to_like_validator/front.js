@@ -63,14 +63,11 @@ function initPendingEntries(){
         $button = $(this);
         $like_id = $(this).siblings(".entry_name").attr('like_id');
         $tag_id = $(this).siblings(".entry_name").attr('tag_id');
-        if ($action == "skip"){
-            $button.parents(".entry").fadeOut();
-        }
-        else{
-            $.post("back.php",{action: $action, like_id: $like_id, tag_id: $tag_id},function(data){
-                $button.parents(".entry").fadeOut();
-            },"json");
-        }
+        
+        $.post("back.php",{action: $action, like_id: $like_id, tag_id: $tag_id},function(data){
+        $button.parents(".entry").fadeOut();
+        },"json");
+
     });
 }
 
