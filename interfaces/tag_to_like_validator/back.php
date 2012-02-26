@@ -45,7 +45,11 @@ function getAllTags(){
    		if ($result->num_rows < 1)  echo "false";
 
            while ($row = $result->fetch_assoc()) {
-           $tags[]=$row;
+               $tags[]=$row;
+               $entry['value'] = str_replace($row['value'],"\'","");
+               $val = addslashes($val);
+               $entry['id'] = $row['id'];
+               $tags[] = $entry;
            }
 
            echo json_encode($tags);

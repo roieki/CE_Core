@@ -23,11 +23,30 @@ switch ($action){
         $like_id = $_POST['like_id'];
         disapproveLikeToTag($like_id, $tag_id);
         break;
-
+    case 'deleteTag':
+        $tag_id = $_POST['tag_id'];
+        delete_tag($tag_id);
+        break;
     case 'skip':
         $tag_id = $_POST['tag_id'];
         $like_id = $_POST['like_id'];
         skipLikeToTag($like_id,$tag_id);
+        break;
+    case 'updateMapping':
+        $tag_id = $_POST['tag_id'];
+        $forum_id = $_POST['forum_id'];
+        update_external_mapping($forum_id,$tag_id,$external_name);
+        break;
+    case 'updateTagsRelations':
+        break;
+    case 'newTag':
+        $tag_value = $_POST['tag_value'];
+        set_tag($tag_value);
+        if (isset($_POST['expand'])){
+            $tag = get_tag($tag_value);
+            $tag_id = $tag->id;
+            expand_tag($tag_id);
+        }
         break;
 
 }

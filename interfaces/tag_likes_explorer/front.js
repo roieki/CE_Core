@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function init(){
     $(".manualTagInput").autocomplete({
-        source: window.combinedTagsJSON,
+        source: window.combinedTagsJSONencoded,
         focus: function (event, ui) {
         },
         select:function (event, ui) {
@@ -16,7 +16,44 @@ function init(){
             $(".manualTagInput").val(ui.item.label);
         }
     });
+
+    initTagControls();
     initButtons();
+}
+
+function initTagControls(){
+    $(".relation_type_selector").change(function(){
+        $selected = $(this).val();
+        $(this).parent().siblings("." + $selected).slideDown();
+        $(this).parent().siblings().not("." + $selected).hide();
+
+        $input = $(this).parent().siblings("." + $selected).children().children('.'+$selected+'_input');
+        $input_id = $(this).parent().siblings("." + $selected).children().children('.'+$selected+'_input-id');
+        if ($selected == "mapping_controls"){
+            $data = window.forumListJson;
+        }
+        else if ($selected == "tags_controls"){
+            $data = window.combinedTagsJSONencoded;
+        }
+
+        initAutocomplete($input,$input_id,$data);
+    });
+}
+
+function initAutocomplete($target,$id_target,$source){
+    $target.autocomplete({
+        source: $source,
+        focus: function (event, ui) {
+        },
+        select:function (event, ui) {
+            $id_target.val(decodeURI(ui.item.id));
+            $target.val(decodeURI(ui.item.label));
+        },
+        change:function (event, ui) {
+            $id_target.val(decodeURI(ui.item.id));
+            $target.val(decodeURI(ui.item.label));
+        }
+    });
 }
 
 function initButtons(){
@@ -33,6 +70,18 @@ function initButtons(){
             case 'connect':
                 connectTag($button);
                 break;
+            case 'delete':
+                deleteTag($button);
+                break;
+            case 'updateMapping':
+                updateMapping($button);
+                break;
+            case 'updateTagsRelation':
+                updateTagsRelation($button);
+                break;
+            case 'newTag':
+                newTag($button);
+                break;
         }
     });
 }
@@ -46,6 +95,16 @@ function exploreTag($button){
     },"json");
 
 
+}
+
+function deleteTag($button){
+    $(".console").html('');
+    $tag_id = $button.parent().attr('entryid');
+    $.post('controller.php',{action:'deleteTag',tag_id:$tag_id},function(){
+        console.log($button.parent());
+        console.log($button.parent().parent());
+        $button.parent().parent().slideUp();
+    });
 }
 
 function formatLikeEntries(jsonData){
@@ -92,7 +151,6 @@ function initPendingEntries(){
 
 /*Toggle functions for tag renaming*/
 function renameTag($button){
-
     $tagNameDiv = $button.parent().siblings(".tag_name");
     $input = '<input id="tag_rename" value="'+$tagNameDiv.html()+'"></input>';
     $tagNameDiv.html($input);
@@ -111,11 +169,38 @@ function setTagName($button){
         $tagNameDiv.html($newTagValue);
         $button.attr('action','rename');
         $button.html('Rename');
-        console.log(data);
         $button.one('click',function(){
             renameTag($button);
-
         });
     });
+}
 
+function newTag($button){
+    $tagNameDiv = $button.parent().siblings();
+    $newTagValue = $(".manualTagInput").val();
+    if ($newTagValue != ''){
+        $.post('controller.php',{action:'newTag',tag_value: $newTagValue},function(data){
+            console.log(data);
+        });
+    }
+
+}
+
+function connectTag($button){
+    $relationsControls = $button.parentsUntil(".tags_data").siblings(".relations_control");
+    $relationsControls.slideDown('slow');
+}
+
+function updateTagsRelation($button){
+
+}
+
+function updateMapping($button){
+    $forum_id = $(".mapping_controls_input-id").val();
+    $tag_id = $(this).parentsUntil(".relations_control").siblings(".tag_data").children(".tag_controls").attr("entryid");
+    console.log($(this).parentsUntil(".relations_control"));
+    console.log($forum_id+","+$tag_id);
+    //$.post('controller.php',{action:'update_external_mapping','tag_id': $tag_id,forum_id:$forum_id},function(data){
+
+    //});
 }

@@ -4,29 +4,34 @@ include("../loader.php");
 
 function getAllTags($json=true){
     global $mysqli;
-    if ($result = $mysqli->query("SELECT * FROM tags where approved>=0")) {
-   		if ($result->num_rows < 1)  echo "false";
-        while ($row = $result->fetch_assoc()) {
-           $tags[]=$row;
-        }
-        if ($json){
-            echo json_encode($tags);
-        }
-        else{
-            return $tags;
-        }
+    $query = "select * from tags where approved >= 0";
+    $result = $mysqli->query($query);
+    while ($row = $result->fetch_assoc()){
+        //$entry['value'] = urlencode(str_replace("'","",$row['value']));
+        $entry['value'] = urlencode($row['value']);
+        $entry['id'] = $row['id'];
+        $tags[] = $entry;
     }
+    if ($json){
+        echo json_encode($tags);
+    }
+    else{
+        return $tags;
+    }
+
 }
 
 function delete_tag($tag_id){
     global $mysqli;
     // delete all tag relations
+
     $query ="DELETE FROM likes_tags_relations WHERE tag_id=" . $tag_id;
     if ($mysqli->query($query)) echo "true";
     else echo "false";
 
     // set tag to status delete
-    $query = "update tags set approved=-1 where tag_id=" . $tag_id;
+    $query = "update tags set approved=-1 where id=" . $tag_id;
+    echo $query;
     if ($mysqli->query($query)) echo "true";
     else echo "false";
 
@@ -40,50 +45,43 @@ function rename_tag($tag_id, $value){
     else echo "false";
 }
 
-function get_tags_relation ($child_tag_id, $parent_tag_id)
-         {
-global $mysqli;
+function get_tags_relation($child_tag_id, $parent_tag_id){
+    global $mysqli;
 	if ($result = $mysqli->query("select * from tags_relation where child_tag_id=".intval($child_tag_id) . " and parent_tag_id=" . intval($parent_tag_id))) {
-   		if ($result->num_rows < 1) return false;
-      		else return true;
+    if ($result->num_rows < 1) return false;
+        else return true;
+    }
+    else return false;
+}
 
-              	}
-               	else return false;
-        }
-
-function set_tags_relation ($child_tag_id, $parent_tag_id)
-{
-
-global $mysqli;
+function set_tags_relation ($child_tag_id, $parent_tag_id){
+    global $mysqli;
 	$tags_relation = get_tags_relation($child_tag_id, $parent_tag_id);
    	//object relation doesn't exists
    	if (!$tags_relation){
-   	   if ($result = $mysqli->query("INSERT INTO tags_relation (child_tag_id, parent_tag_id) VALUES (".intval($child_tag_id).",".intval($parent_tag_id). ")")) {
-
-   	   	//insert success
-   	   	return true;
-   	  }
-   	  //if insert failed
-   	  else return false;
+        if ($result = $mysqli->query("INSERT INTO tags_relation (child_tag_id, parent_tag_id) VALUES (".intval($child_tag_id).",".intval($parent_tag_id). ")")) {
+            //insert success
+            return true;
+        }
+   	    //if insert failed
+   	    else return false;
    	}
    	//if object relation exists
    	else return true;
-
-
 }
 
 function cleanFreeText($text){
-	$clean_text = strtolower($text);
-   	$clean_text = trim($clean_text);
-	return $clean_text;
-    }
+    $clean_text = strtolower($text);
+    $clean_text = trim($clean_text);
+    return $clean_text;
+}
 
 
 function set_tag($tag) {
 	global $mysqli;
 
    	$tag_exist = get_tag($tag);
-   if (!$tag_exist){
+    if (!$tag_exist){
    	  if ($result = $mysqli->query("INSERT INTO tags (value) VALUES ('$tag')")) {
 
    		$tag_id = $mysqli->insert_id;
@@ -174,4 +172,36 @@ function skipLikeToTag($like_id,$tag_id){
 
 
 }
+
+function get_external_categories($external_name,$tableName=null){
+    global $mysqli;
+    $external_table = $external_name . "_extrnal_categoires";
+    if (!is_null($tableName)) $external_table = $tableName;
+
+    $query = "select * from " . $external_table;
+
+    if ($result = $mysqli->query($query)){
+        while ($row = $result->fetch_assoc()){
+            $entry['value'] = str_replace("'","",$row['forum_name']);
+            $entry['id'] = $row['forumid'];
+            $categories[] = $entry;
+        }
+        return json_encode($categories);
+    }
+    else{
+        return false;
+    }
+}
+
+function update_external_mapping($forum_id,$tag_id,$external_name,$tableName=null){
+    global $mysqli;
+    $external_table = $external_name . "_tags_mapping";
+    if (!is_null($tableName)) $external_table = $tableName;
+
+    $query = "insert ignore into " . $external_table . " values (" . $forum_id . "," . $tag_id . ")";
+    if ($result = $mysqli->query($query)) return true;
+    else return false;
+}
+
+
 ?>
