@@ -2,80 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52dc21e2-c158-470c-a58c-8caba84142d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyxdm.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/s.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/css/ui-lightness/jquery-ui-1.8.17.custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/automated.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/ce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/crm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/MIT-license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/cors/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.Widgets.debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.Widgets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.Widgets.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/easyXDM.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/blank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/bookmark.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/bookmark.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/bridge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/data.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/glossary.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/methods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remote.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remoteapp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remotedata.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remotemethods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remoterpcbackend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/remotetransport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/resize_iframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/resize_intermediate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/resized_iframe_1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/resized_iframe_2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/transport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/upload.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/upload_handler.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/upload_rpc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/widget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/widgets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/example/xhr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/json2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/name.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/easyTest.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/easyTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/easyXDM.debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/test_namespace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/test_rpc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/test_transport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/easyXDM/tests/tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/handlres.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/jquery.json-2.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/md5-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/js/stopwatch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interfaces/tag_console/back.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/loader.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_to_like_validator/back.php" afterPath="$PROJECT_DIR$/interfaces/tag_to_like_validator/back.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/crm/index.php" afterPath="$PROJECT_DIR$/tools/crm/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/index.php" afterPath="$PROJECT_DIR$/install/index.php" />
     </list>
     <ignored path="CE_Core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/install/index.php">
+      <file leaf-file-name="likes_and_tags_functions.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5175202">
+            <state line="102" column="8" selection-start="3254" selection-end="3254" vertical-scroll-proportion="-4.018767">
               <folding />
             </state>
           </provider>
@@ -128,6 +59,9 @@
         <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" />
         <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" />
         <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" />
+        <option value="$PROJECT_DIR$/system/loader.php" />
+        <option value="$PROJECT_DIR$/install/index.php" />
+        <option value="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" />
       </list>
     </option>
   </component>
@@ -192,7 +126,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="install" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -201,12 +167,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="CE_Core" serverId="2bd3e2a0-19aa-4857-baf0-c5bb0fcd67b7" autoUpload="true">
     <servers>
@@ -228,6 +198,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/system" />
       <recent name="$PROJECT_DIR$/interfaces" />
       <recent name="$PROJECT_DIR$/tools" />
     </key>
@@ -246,12 +217,12 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="2bd3e2a0-19aa-4857-baf0-c5bb0fcd67b7" server_name="CE_Core">
       <method>
         <option name="FtpUpload" enabled="false">
           <server_id />
@@ -283,6 +254,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="52dc21e2-c158-470c-a58c-8caba84142d6" name="Default" comment="" />
       <created>1329944164187</created>
       <updated>1329944164187</updated>
     </task>
@@ -292,25 +264,26 @@
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977098" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19642857" sideWeight="0.670229" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19967532" sideWeight="0.670229" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -347,7 +320,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit - 26/2/2012" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -360,98 +333,96 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Commit - 26/2/2012" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/fixer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="158" selection-end="221" vertical-scroll-proportion="-4.821429">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/crm/front.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/js/automated.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/js/crm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="19" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaces/tag_console/back.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/crm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaces/tag_to_like_validator/back.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1059" selection-end="1059" vertical-scroll-proportion="1.7197453">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/crm/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="36" selection-start="728" selection-end="728" vertical-scroll-proportion="1.0221465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="60" selection-start="6184" selection-end="6184" vertical-scroll-proportion="0.6878049">
-          <folding />
-        </state>
+        <state line="200" column="60" selection-start="6184" selection-end="6184" vertical-scroll-proportion="0.6878049" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="596" selection-end="619" vertical-scroll-proportion="0.16354345">
-          <folding />
-        </state>
+        <state line="12" column="39" selection-start="596" selection-end="619" vertical-scroll-proportion="0.16354345" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="15" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-0.018675722">
-          <folding />
-        </state>
+        <state line="98" column="15" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-0.018675722" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="15" selection-start="989" selection-end="996" vertical-scroll-proportion="0.044585988">
+        <state line="35" column="15" selection-start="989" selection-end="996" vertical-scroll-proportion="0.044585988" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="520" column="9" selection-start="13660" selection-end="13660" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/collect_likes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="346" column="9" selection-start="9271" selection-end="9271" vertical-scroll-proportion="3.780531" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="50" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.4684838" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="73" selection-start="1075" selection-end="1085" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.22929937">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="9" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.03821656">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5175202">
+        <state line="142" column="77" selection-start="4263" selection-end="4263" vertical-scroll-proportion="0.040885862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="8" selection-start="3254" selection-end="3254" vertical-scroll-proportion="-4.018767">
           <folding />
         </state>
       </provider>

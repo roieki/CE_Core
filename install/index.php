@@ -45,15 +45,16 @@ else{
 	
 
 <?php
+
+//If we have Facebook user id
 if ($user_id){
 	$likes_names = array();
 	$likes = json_decode(file_get_contents("https://graph.facebook.com/" . $user_id . "/likes?" . $access_token));
 
-
     $items = array();
 
-	$result = $mysqli->query("select * from users where user_id=$user_id");
-	if ($result->num_rows < 1) $mysqli->query("INSERT IGNORE INTO users (user_id) VALUES (".$user_id . ")");
+    $mysqli->query("INSERT IGNORE INTO users (user_id) VALUES (".$user_id . ")");
+    $mysqli->query("INSERT IGNORE INTO fxp_users (user_id) VALUES (".$user_id . ")")
 
 
     //echo "new user installed";
@@ -70,10 +71,11 @@ if ($user_id){
     $row  = $result->fetch_assoc();
     $existing_relations = $row['count(*)'];
 
-
-    if ($likes_count == $left || $left == $existing_relations){
+    //Check that user has the same number fo lkes
+    //TODO: Why did we check existing relations count?
+    //if ($likes_count == $left || $left == $existing_relations){
+    if ($likes_count == $left){
         echo "<script>window.location.href = 'http://combined-effect.com/CE_core/rest/user_categories_display.php?userid=" . $user_id . "';</script>";
-        //echo "update users set likes_count=" . $left." where user_id=".$user_id;
     }
     else{
         $mysqli->query("update users set likes_count=" . $left." where user_id=".$user_id);
@@ -83,20 +85,22 @@ if ($user_id){
 
     echo "מתקין...";
     ob_flush(); flush();
-    //ignore_user_abort(true);
-    //set_time_limit(0);
-	foreach($likes['data'] as $like_object){
+
+    foreach($likes['data'] as $like_object){
 		//echo $left . " left...<br>";
 		$like_object = get_object_vars($like_object);
         $left--;
 
         echo ".";
         ob_flush(); flush();
-			//echo $like_object['id'] . "<br>";
+		//echo $like_object['id'] . "<br>";
 		$likes_names[$like_object['id']] = $like_object['name']; 
 		///echo $like_object['name'] . " || ";
-        $mysqli->query("INSERT IGNORE INTO likes (like_id,like_name, approved) VALUES (".intval($like_object['id']).",'". $like_object['name']."', 0)");
-		//$additional = $facebook->api('/' + $like_object['id'],'GET');
+        $mysqli->query("INSERT IGNORE INTO likes (like_id,like_name, approved) VALUES (".$like_object['id'].",'". $like_object['name']."', 0)");
+
+
+        //WE ARE HERE
+        $result = $mysqli->query("select * from likes_tags_relations where like_id=" . $like_object['id']);
         $additional = get_object_vars(json_decode(file_get_contents("http://graph.facebook.com/" .$like_object['id'])));
 		$cached_like = get_like_by_object_id($like_object['id']);
 
@@ -136,6 +140,7 @@ if ($user_id){
                 if ($link == "empty") continue;
                 if (preg_match ("/showthread\.php\?t\=([0-9]+)$/" , $link['url'], $m)){
                     //if (preg_match("/t-([0-9]+)\.html/" , $link->url, $m)){
+                    //?!?!?!?!??! TODO ?!?!?!?!? Like id doesn't exist yet!?!
                     set_object_relation($like_id,'like',$forum_id,'forum');
                     echo "(";
                     ob_flush(); flush();
@@ -234,3 +239,5 @@ else{
 ?>
 	</body>	
 </html>
+
+
