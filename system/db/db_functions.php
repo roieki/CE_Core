@@ -13,8 +13,7 @@ function save_like($like_object,$additional,$fbuid=NULL,$short=false){
 	global $mongo;	
 	$db = $mongo->combined;
 	$likes = $db->likes;
-    $merged = array_merge($like_object,$additional);
-
+	$merged = array_merge($like_object,$additional);
 	$likes->save($merged);
 	$likes->ensureIndex(array('id'=>1), array("unique" => true));
 	$like_object_id = set_object('like',$like_object['name'],$like_object['id']);
@@ -94,29 +93,33 @@ function save_bing($like_id,$bing_data,$domain=NULL){
 	$likes->save($like);
 }
 
-function save_parsed_bing($like_id,$bing_data){
-	global $mongo;
+function save_parsed_search_data($like_id,$search_query_data, $search_source){
+
+    global $mongo;
 	$db = $mongo->combined;
-	$likes_bing_data = $db->likes_bing_data;
-	$like['id'] = $like_id;
-    $like['bing_data']['parsed_data'] = $bing_data;
-    $likes_bing_data->save($like);
+	$likes = $db->likes;
+	$like = $likes->findOne(array('id' => $like_id));
+	$like["$search_source"]['parsed_data'] = $search_query_data;
+
+	$likes->save($like);
 }
 
 
 //Saves bing data regardless of any like.
-function save_bing_data($bing_data,$query,$query_id,$tag_id=NULL){
+function save_search_data($search_data,$query,$query_id,$tag_id=NULL, $search_source_id){
     global $mongo;
     $db = $mongo->combined;
     $bingDataStore = $db->bingDataStore;
-    $bing_data['query'] = $query;
-    $bing_data['query_id'] = $query_id;
+    $search_data['query'] = $query;
+    $search_data['query_id'] = $query_id;
+    $search_data['search_source_id'] = $search_source_id;
     if ($tag_id != NULL){
-        $bing_data['tag_id'] = $tag_id;
+        $search_data['tag_id'] = $tag_id;
     }
-    var_dump($bing_data);
-    var_dump($bingDataStore);
-    $bingDataStore->save($bing_data);
+    //var_dump($bing_data); 
+    //var_dump($bingDataStore);
+    $bingDataStore->save($search_data);
+
 }
 
 function save_categories($like_id,$categories){
@@ -269,6 +272,30 @@ function get_object_relation_by_object_id($object_id1,$object_id2){
         return $user_object_relation;
     }
     else return false;
+}
+
+function run_select_query($sql){
+    global $memcache;
+    global $mysqli;
+
+    //create an index key for memcache
+    $key = md5('query'.$sql);
+
+    //lookup value in memcache
+    $result = $memcache->get($key);
+
+    //check if we got something back
+    if($result == null) {
+        //fetch from database
+        $qry = mysqli_query($sql) or die(mysql_error()." : $sql");
+
+        if(mysqli_num_rows($qry)> 0) {
+            $result = mysqli_fetch_object($qry);
+            //store in memcache
+            $memcache->set($key,$result,0,3600);
+        }
+    }
+    return $result;
 }
 
 ?>
