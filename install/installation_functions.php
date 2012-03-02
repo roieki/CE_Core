@@ -28,7 +28,7 @@ function registerUser($user_id,$access_token){
     }
     else{
         $mysqli->query("update users set likes_count=" . $left." where user_id=".$user_id);
-        return false;
+        return $likes;
     }
 
 }
