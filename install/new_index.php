@@ -62,7 +62,7 @@ if ($user_id){
     $likes_count = $row['likes_count'];
 
     $result = $mysqli->query("select count(*) from users_likes_relations where user_id='".$user_id."'");
-
+    //This is good
     $row  = $result->fetch_assoc();
     $existing_relations = $row['count(*)'];
 
