@@ -50,7 +50,7 @@ function get_user_data($fbuid){
 	$db = $mongo->combined;
 	$likes = $db->likes;
 	$user_id = get_object_by_external_id($fbuid);
-	$result = $mysqli->query("select * from objects_relations where object_id1=".intval($user_id));
+	$result = $mysqli->run_select_query("select * from objects_relations where object_id1=".intval($user_id));
 	while ($row = $result->fetch_assoc()){
 		$object_id = $row['object_id2'];
 		$external_id = get_external_id_by_object_id($object_id);	
@@ -137,7 +137,7 @@ function save_forum_relation_db($like_id,$forum_id){
 	global $mysqli;
 	$type_id = get_type_id($type);
 	
-	$result = $mysqli->query('select * from likes_forums_relations where like_id='.intval($like_id).' and forum_id='.intval($forum_id).' and category_id='.intval($category_id).' and approved=\'true\'');
+	$result = $mysqli->run_select_query('select * from likes_forums_relations where like_id='.intval($like_id).' and forum_id='.intval($forum_id).' and category_id='.intval($category_id).' and approved=\'true\'');
 	if ($result->num_rows > 0) return false;
 	$object= $result->fetch_object();
 	$result->close();
@@ -182,7 +182,7 @@ function get_object_by_value_type($value, $type){
 	global $mysqli;
 
 	$type_id = get_type_id($type);
-	if ($result = $mysqli->query("SELECT * FROM object WHERE type_id=$type_id AND content='".$value."'")) {
+	if ($result = $mysqli->run_select_query("SELECT * FROM object WHERE type_id=$type_id AND content='".$value."'")) {
 	  //echo "SELECT * FROM object WHERE type_id=$type_id AND content='".$value."'";
 	  if ($result->num_rows < 1) return false;
 	  $object= $result->fetch_object();
@@ -205,7 +205,7 @@ function get_object_by_external_id($id_in_source){
 function get_external_id_by_object_id($objectid){
 	global $mysqli;	
 	//echo "SELECT id_in_source FROM object WHERE id=".intval($objectid)."\n";
-	if ($result = $mysqli->query("SELECT id_in_source FROM object WHERE id=".intval($objectid))) {
+	if ($result = $mysqli->run_select_query("SELECT id_in_source FROM object WHERE id=".intval($objectid))) {
 	  if ($result->num_rows < 1) return false;
 	  $object= $result->fetch_object();
 	  $result->close();
@@ -255,7 +255,7 @@ function check_user_exist($fbuid){
 
 function get_object_relation_by_relation_id($relation_id){
 	global $mysqli;
-	if ($result = $mysqli->query("select * from objects_relations where id=".intval($relation_id))) {
+	if ($result = $mysqli->run_select_query("select * from objects_relations where id=".intval($relation_id))) {
 		if ($result->num_rows < 1) return false;
 		$user_object_relation = $result->fetch_object();
 		return $user_object_relation;
@@ -266,7 +266,7 @@ function get_object_relation_by_relation_id($relation_id){
 
 function get_object_relation_by_object_id($object_id1,$object_id2){
     global $mysqli;
-    if ($result = $mysqli->query("select * from objects_relations where object_id1=".intval($object_id1)." and object_id2=".intval($object_id2))) {
+    if ($result = $mysqli->run_select_query("select * from objects_relations where object_id1=".intval($object_id1)." and object_id2=".intval($object_id2))) {
         if ($result->num_rows < 1) return false;
 		$user_object_relation = $result->fetch_object();
         return $user_object_relation;

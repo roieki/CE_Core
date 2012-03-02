@@ -38,7 +38,7 @@ function insertLike($like_id,$like_name){
 function getTagInternalMapping($like_id){
     global $mysqli;
     $query = "select tag_id from like_tags_relations where like_id=" . $like_id;
-    $result = $mysqli->query($query);
+    $result = run_select_query($query);
     if ($result->numrows > 0){
         while ($row = $result->fetch_assoc()){
             $tags[] = $row['tag_id'];
@@ -66,7 +66,7 @@ function getTagExternalMapping($tag_id,$client){
 function getTagInternalFromExternal($external_tag_id,$client){
     global $mysqli;
     $query = "select internal_tag_id from ".$client."_tags_mapping where external_tag_id=" . $external_tag_id;
-    $result = $mysqli->query($query);
+    $result = run_select_query($query);
     if ($result->numrows > 0){
         while ($row = $result->fetch_assoc()){
             $tags[] = $row['internal_tag_id'];
@@ -141,7 +141,7 @@ function createMappingForLikeOnTheFly($like){
 function getInternalTagFacebookCategory($internal_tag_id){
     global $mysqli;
     $query = 'select * from tags_facebook_category where tag_id = ' . $internal_tag_id . " limit 1";
-    $result = $mysqli->query($query);
+    $result = run_select_query($query);
     $row = $result->fetch_assoc();
     if ($row['category_id'] != 0){
         return $row['category_id'];
@@ -174,7 +174,7 @@ function fuzzyFacebookCategoriesComaprison($category_a,$category_b){
 
         if ($category_a == $category_b) return true;
         $query = 'select * from fb2fb where category_a = ' . $category_a . " and category_b = " . $category_b;
-        $result = $mysqli->query($query);
+        $result = run_select_query($query);
 
         if ($result->num_rows() > 0){
             return true;

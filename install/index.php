@@ -48,40 +48,18 @@ else{
 
 //If we have Facebook user id
 if ($user_id){
-	$likes_names = array();
-	$likes = json_decode(file_get_contents("https://graph.facebook.com/" . $user_id . "/likes?" . $access_token));
+	$user_likes = registerUser($user_id,$access_token);
 
-    $items = array();
-
-    $mysqli->query("INSERT IGNORE INTO users (user_id) VALUES (".$user_id . ")");
-    $mysqli->query("INSERT IGNORE INTO fxp_users (user_id) VALUES (".$user_id . ")")
-
-
-    //echo "new user installed";
-
-    $likes = get_object_vars($likes);
-	$left = sizeof($likes['data']);
-
-    $result = $mysqli->query("select likes_count from users where user_id='".$user_id."'");
-    $row  = $result->fetch_assoc();
-    $likes_count = $row['likes_count'];
-
-    $result = $mysqli->query("select count(*) from users_likes_relations where user_id='".$user_id."'");
-
-    $row  = $result->fetch_assoc();
-    $existing_relations = $row['count(*)'];
 
     //Check that user has the same number fo lkes
     //TODO: Why did we check existing relations count?
     //if ($likes_count == $left || $left == $existing_relations){
-    if ($likes_count == $left){
+    if ($user_likes){
         echo "<script>window.location.href = 'http://combined-effect.com/CE_core/rest/user_categories_display.php?userid=" . $user_id . "';</script>";
-    }
-    else{
-        $mysqli->query("update users set likes_count=" . $left." where user_id=".$user_id);
-        ob_flush(); flush();
+        return;
     }
 
+    //ELSE, go on to install
 
     echo "מתקין...";
     ob_flush(); flush();
@@ -93,10 +71,8 @@ if ($user_id){
 
         echo ".";
         ob_flush(); flush();
-		//echo $like_object['id'] . "<br>";
-		$likes_names[$like_object['id']] = $like_object['name']; 
-		///echo $like_object['name'] . " || ";
-        $mysqli->query("INSERT IGNORE INTO likes (like_id,like_name, approved) VALUES (".$like_object['id'].",'". $like_object['name']."', 0)");
+		$likes_names[$like_object['id']] = $like_object['name'];
+        $external_tags = getMappedTagID($like_object,'fxp');
 
 
         //WE ARE HERE
@@ -177,7 +153,7 @@ if ($user_id){
     ob_flush(); flush();
 	foreach ($categories as $likes_id=>$catAr){
 		foreach ($catAr as $forumid){
-			if ($result = $mysqli->query("SELECT * FROM forums_list WHERE forumid=$forumid")) {
+			if ($result = run_select_query("SELECT * FROM forums_list WHERE forumid=$forumid")) {
 			  if ($result->num_rows < 1) continue;
 			  $object= $result->fetch_object();
 			  $forum_name = $object->forum_name;
