@@ -35,9 +35,14 @@ function initTagControls(){
         else if ($selected == "tags_controls"){
             $data = window.combinedTagsJSONencoded;
         }
+        else if ($selected == "fb_mapping_controls"){
+            $data = window.facebookCategoriesJson;
+        }
 
         initAutocomplete($input,$input_id,$data);
     });
+
+
 }
 
 function initAutocomplete($target,$id_target,$source){
@@ -81,6 +86,9 @@ function initButtons(){
                 break;
             case 'newTag':
                 newTag($button);
+                break;
+            case 'updateFBMapping':
+                updateFBMapping($button);
                 break;
         }
     });
@@ -203,4 +211,12 @@ function updateMapping($button){
     //$.post('controller.php',{action:'update_external_mapping','tag_id': $tag_id,forum_id:$forum_id},function(data){
 
     //});
+}
+
+function updateFBMapping($button){
+    $tag_id = $(this).parentsUntil(".relations_control").siblings(".tag_data").children(".tag_controls").attr("entryid");
+    $category_id = $(".fb_mapping_controls_input-id").val();
+    $.post('controller.php',{action:'update_facebook_mapping','tag_id': $tag_id,'fb_category_id':$category_id},function(data){
+
+    });
 }

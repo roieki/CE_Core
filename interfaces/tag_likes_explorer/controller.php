@@ -48,7 +48,11 @@ switch ($action){
             expand_tag($tag_id);
         }
         break;
-
+    case 'update_facebook_mapping':
+        $tag_id = $_POST['tag_id'];
+        $fb_category = $_POST['fb-category'];
+        update_tag_facebook_category($tag_id,$fb_category,$external_name);
+        break;
 }
 
 

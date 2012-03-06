@@ -1,9 +1,8 @@
 <?php
 include_once("../loader.php");
 
-
 function getMappedTagID($like,$client){
-    global $mysqli;
+
     $like_id  = $like['id'];
     $like_name = $like['name'];
 
@@ -21,8 +20,8 @@ function getMappedTagID($like,$client){
 
     }
     else{
-        //no mapping
-        createMappingForLikeOnTheFly($like);
+        //No existing mapping for the like, create mapping on file
+        $external_tags = createMappingForLikeOnTheFly($like);
     }
 
     return $external_tags;
@@ -30,7 +29,6 @@ function getMappedTagID($like,$client){
 
 function insertLike($like_id,$like_name){
     global $mysqli;
-
     $query = "INSERT IGNORE INTO likes (like_id,like_name, approved) VALUES (".$like_id.",'". $like_name."', 0)";
     return ($result = $mysqli->query($query));
 }
@@ -78,6 +76,7 @@ function getTagInternalFromExternal($external_tag_id,$client){
 }
 
 function createMappingForLikeOnTheFly($like){
+    global $mysqli;
     //THIS IS WHAT WE WANT:
     $winning_external_tags = null;
 
@@ -85,8 +84,8 @@ function createMappingForLikeOnTheFly($like){
 
     $additional = get_object_vars(json_decode(file_get_contents("http://graph.facebook.com/" .$like->id)));
     $like_facebook_category = $additional['category'];
-
-    $forum_links = process($like);
+    $fbuid = $like['id'];
+    $forum_links = processLike($like,$additional,$fbuid);
     //foreach forum we got
     foreach ($forum_links as $forum_link){
         $external_tag_id = getExternalTagsFromLink($forum_link);
@@ -116,25 +115,30 @@ function createMappingForLikeOnTheFly($like){
             }
 
             //THE PUNCH LINE
-            if (sizeof($pro) > sizeof($con)){
-                $max = max($pro);
-                $winning_internal_tag_facebook_category = array_search($max,$pro);
+            if (sizeof($pro) >= sizeof($con)){
+                //We can use a threshold here
+                //$max = max($pro);
+                //$winning_internal_tag_facebook_category = array_search($max,$pro);
                 if (!isset($winning_external_tags[$external_tag_id])){
                     $winning_external_tags[$external_tag_id] = 1;
                 }
                 else{
                     $winning_external_tags[$external_tag_id]++;
                 }
-
+                $query = "INSERT IGNORE INTO likes_tags_relations (like_id,tag_id, approved) VALUES (".$like->id.",'". $external_tag_id."', 10)";
+                $result = $mysqli->query($query);
             }
-            //TODO: connect the tags found as new likes_tags_relations for the like we're on with approved= -10
+            else{
+                $query = "INSERT IGNORE INTO likes_tags_relations (like_id,tag_id, approved) VALUES (".$like->id.",'". $external_tag_id."', -10)";
+                $result = $mysqli->query($query);
+            }
+
         }
-        //We can use a threshold here
+
     }
 
     //We can return more than one $external_tag_id per like
-    //TODO: decide what to return and to whom.
-    //TODO: insert on the fly mapping to db in user_categories
+    return $winning_external_tags;
 }
 
 
@@ -185,6 +189,49 @@ function fuzzyFacebookCategoriesComaprison($category_a,$category_b){
 }
 
 
+/*
+ * Extracts on the fly relevant forums from target domain (FXP).
+ * Also performs translation
+ * Saves like, bingdata and additional data provided, as well as relations
+ * */
+function processLike($like_object,$additional,$fbuid,$domain=NULL){
+	global $conf;
+	$domain = 'fxp.co.il -site:fxp.co.il/archive';
+	//$domain = 'fxp.co.il/archive';
+	//$domain = NULL;
+	save_like($like_object,$additional,$fbuid);
+	$translation = get_translation($like_object['id'],$like_object['name']);
+	$query = '"' . $translation . '"';
+	if ($translation == ''){
+		$query = '"' . $like_object['name'] . '"';
+	}
+	if ($domain != NULL){
+		$query .= " site:" . $domain;
+	}
+
+	//get bing data
+	$results = getBingData($query);
+	//Add category data
+	if (is_array($results)){
+        foreach($results as $entry){
+            if (is_null($entry)) {
+                continue;
+            }
+//			var_dump($entry);
+            $item = get_object_vars($entry);
+            $item['url'] = $entry->Url;
+			$res[] = $item;
+		}
+	}
+	else {
+		$res[] = 'empty';
+	}
+
+	save_bing($like_object['id'],$res,$domain);
+	return($res);
+
+
+}
+
 
 ?>
-

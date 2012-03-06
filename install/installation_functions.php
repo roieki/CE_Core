@@ -1,16 +1,12 @@
 <?php
 
-function registerUser($user_id,$access_token){
+function registerUser($user_id,$likes){
+    global $mysqli;
     $likes_names = array();
-    $likes = json_decode(file_get_contents("https://graph.facebook.com/" . $user_id . "/likes?" . $access_token));
-
     $items = array();
 
     $mysqli->query("INSERT IGNORE INTO users (user_id) VALUES (".$user_id . ")");
     $mysqli->query("INSERT IGNORE INTO fxp_users (user_id) VALUES (".$user_id . ")")
-
-
-    //echo "new user installed";
 
     $likes = get_object_vars($likes);
     $left = sizeof($likes['data']);
@@ -24,13 +20,35 @@ function registerUser($user_id,$access_token){
     $row  = $result->fetch_assoc();
     $existing_relations = $row['count(*)'];
     if ($likes_count == $left){
-        return $likes;
+        return true;
     }
     else{
         $mysqli->query("update users set likes_count=" . $left." where user_id=".$user_id);
-        return $likes;
+        return false;
     }
-
 }
+
+function updateCombinedTags($user_id,$likes){
+  foreach($likes['data'] as $like_object){
+        $like_object = get_object_vars($like_object);
+        $likes_names[$like_object['id']] = $like_object['name'];
+        $external_tags = getMappedTagID($like_object,'fxp');
+        $user_tags[$like_object['id']] = $external_tags;
+        saveUserCategories($user_tags);
+   }
+    return $user_tags;
+}
+
+function saveUserCategories($user_tags){
+    global $mysqli;
+    foreach ($user_tags as $like_id=>$external_tags){
+        foreach ($external_tags as $external_tag){
+            $query = "insert ignore into users_forums_relations (user_id,forum_id) values (".$user_id.",".$external_tag.")";
+            $result = $mysqli->query($query);
+        }
+    }
+}
+
+
 
 ?>

@@ -21,6 +21,9 @@
                 forumListJsonencoded.push(decodeURI(forumListJson[index].value).replace("+"," "));
             }
 
+            var facebookCategories = '<?php echo getFacebookCategories();?>';
+            var facebookCategoriesJson = JSON.parse(facebookCategories);
+
 
 
         </script>
@@ -223,6 +226,7 @@
                         <option value="choose">Choose action</option>
                         <option value="mapping_controls">Mapping</option>
                         <option value="tags_controls">Tag relation</option>
+                        <option value="fb_mapping_controls">Facebook Mapping</option>
                     </select>
                 </span>
                 <span class="mapping_controls relation_option">
@@ -243,6 +247,13 @@
                         <input class='tags_controls_input' type='text'></>
                         <input type='hidden' class='tags_controls_input-id' />
                         <span class='tags_controls_input_submit button' action="updateTagsRelations">Submit</span>
+                    </span>
+                </span>
+                <span class="fb_mapping_controls relation_option">
+                    <span class='fb_mapping_controls_input_wrapper'>
+                        <input class='fb_mapping_controls_input' type='text'></>
+                        <input type='hidden' class='fb_mapping_controls_input-id' />
+                        <span class='fb_mapping_controls_input_submit button' action="updateFBMapping">Submit</span>
                     </span>
                 </span>
             </div>

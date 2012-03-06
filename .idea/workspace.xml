@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="52dc21e2-c158-470c-a58c-8caba84142d6" name="Default" comment="" />
-    <list default="true" id="c391daba-fa54-4fce-9ce5-50e903d16bc4" name="Memcached" comment="Memcached">
+    <list id="c391daba-fa54-4fce-9ce5-50e903d16bc4" name="Memcached" comment="Memcached" />
+    <list default="true" id="1170887d-b566-47b5-8e01-a24d77d980e4" name="New installation" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/index.php" afterPath="$PROJECT_DIR$/install/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/installation_functions.php" afterPath="$PROJECT_DIR$/install/installation_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" afterPath="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest/user_categories_display.php" afterPath="$PROJECT_DIR$/rest/user_categories_display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" afterPath="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" />
     </list>
     <ignored path="CE_Core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,52 +34,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="likes_and_tags_functions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php">
+      <file leaf-file-name="installation_functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install/installation_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="43" selection-start="5863" selection-end="5863" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helpers.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/helpers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#getBingData#0;n#!!top" expanded="false" />
-                <element signature="n#wikidefinition#0;n#!!top" expanded="false" />
-                <element signature="n#wikilang#0;n#!!top" expanded="false" />
-                <element signature="n#getPostCategories#0;n#!!top" expanded="false" />
-                <element signature="n#rcurl#0;n#!!top" expanded="false" />
+                <element signature="e#1370#1657#0" expanded="false" />
+                <element signature="e#1428#1651#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="likes_and_tags_functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="54" selection-start="2670" selection-end="2696" vertical-scroll-proportion="56.153847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/db/db_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="9" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install/controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="0" selection-start="1763" selection-end="2675" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/install/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1172" selection-end="1218" vertical-scroll-proportion="-8.0">
+            <state line="25" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.55684453">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="installation_functions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/install/installation_functions.php">
+      <file leaf-file-name="base_facebook.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/facebook-php-sdk/src/base_facebook.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="39" selection-start="627" selection-end="667" vertical-scroll-proportion="-17.538462">
+            <state line="421" column="31" selection-start="11675" selection-end="11675" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/install/new_index.php">
+      <file leaf-file-name="loader.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install/loader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.7875">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,25 +118,26 @@
         <option value="$PROJECT_DIR$/interfaces/tag_to_like_validator/back.php" />
         <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/fixer.php" />
         <option value="$PROJECT_DIR$/tools/crm/index.php" />
-        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" />
-        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" />
-        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" />
-        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" />
         <option value="$PROJECT_DIR$/system/loader.php" />
-        <option value="$PROJECT_DIR$/install/new_index.php" />
         <option value="$PROJECT_DIR$/system/global_functions/memcached.php" />
         <option value="$PROJECT_DIR$/system/db/db_functions.php" />
-        <option value="$PROJECT_DIR$/install/index.php" />
-        <option value="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" />
+        <option value="$PROJECT_DIR$/install/new_index.php" />
+        <option value="$PROJECT_DIR$/rest/user_categories_display.php" />
+        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php" />
+        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php" />
+        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js" />
+        <option value="$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php" />
         <option value="$PROJECT_DIR$/install/installation_functions.php" />
+        <option value="$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php" />
+        <option value="$PROJECT_DIR$/install/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1174" />
+    <option name="width" value="1280" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -174,6 +198,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CE_Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="install" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -181,14 +219,15 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="CE_Core" serverId="2bd3e2a0-19aa-4857-baf0-c5bb0fcd67b7" autoUpload="true">
     <servers>
@@ -268,33 +307,34 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="52dc21e2-c158-470c-a58c-8caba84142d6" name="Default" comment="" />
       <changelist id="c391daba-fa54-4fce-9ce5-50e903d16bc4" name="Memcached" comment="" />
+      <changelist id="1170887d-b566-47b5-8e01-a24d77d980e4" name="New installation" comment="" />
       <created>1329944164187</created>
-      <updated>1330697343400</updated>
+      <updated>1331072966978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1174" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20473933" sideWeight="0.9754273" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20458016" sideWeight="0.9754273" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13354701" sideWeight="0.67109007" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021104" sideWeight="0.7954199" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -355,50 +395,75 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rest/index.php">
+    <entry file="file://$PROJECT_DIR$/system/global_functions/memcached.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="5" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core.php">
+    <entry file="file://$PROJECT_DIR$/install/new_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="520" column="9" selection-start="13660" selection-end="13660" vertical-scroll-proportion="0.33333334" />
+        <state line="73" column="5" selection-start="1880" selection-end="1880" vertical-scroll-proportion="-62.57143" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/collect_likes.php">
+    <entry file="file://$PROJECT_DIR$/install/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="346" column="9" selection-start="9271" selection-end="9271" vertical-scroll-proportion="3.780531" />
+        <state line="63" column="0" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.3821656" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/login.php">
+    <entry file="file://$PROJECT_DIR$/rest/user_categories_display.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="50" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.4684838" />
+        <state line="115" column="26" selection-start="4000" selection-end="4000" vertical-scroll-proportion="-0.17468806" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/js/login.js">
+    <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="73" selection-start="1075" selection-end="1085" vertical-scroll-proportion="0.0" />
+        <state line="53" column="36" selection-start="1570" selection-end="1598" vertical-scroll-proportion="0.57961786">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/service.js">
+    <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/front.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="221" column="1" selection-start="0" selection-end="6930" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/loader.php">
+    <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/front.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.22929937" />
+        <state line="23" column="57" selection-start="1195" selection-end="1195" vertical-scroll-proportion="-0.85714287">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces/tag_likes_explorer/back.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="26" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.25853658">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="9" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.03821656" />
+        <state line="76" column="0" selection-start="1763" selection-end="2675" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/global_functions/memcached.php">
+    <entry file="file://$PROJECT_DIR$/system/db/db_functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
+        <state line="13" column="9" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install/installation_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1370#1657#0" expanded="false" />
+            <element signature="e#1428#1651#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -407,50 +472,30 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/db/db_functions.php">
+    <entry file="file://$PROJECT_DIR$/system/facebook-php-sdk/src/base_facebook.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="33" selection-start="1273" selection-end="1279" vertical-scroll-proportion="-7.5384617">
+        <state line="421" column="31" selection-start="11675" selection-end="11675" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#getBingData#0;n#!!top" expanded="false" />
-            <element signature="n#wikidefinition#0;n#!!top" expanded="false" />
-            <element signature="n#wikilang#0;n#!!top" expanded="false" />
-            <element signature="n#getPostCategories#0;n#!!top" expanded="false" />
-            <element signature="n#rcurl#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/global_functions/likes_and_tags_functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="43" selection-start="5863" selection-end="5863" vertical-scroll-proportion="0.0">
+        <state line="91" column="54" selection-start="2670" selection-end="2696" vertical-scroll-proportion="56.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.3322091">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1172" selection-end="1218" vertical-scroll-proportion="-8.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/installation_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="627" selection-end="667" vertical-scroll-proportion="-17.538462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install/new_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.7875">
+        <state line="25" column="0" selection-start="373" selection-end="373" vertical-scroll-proportion="0.55684453">
           <folding />
         </state>
       </provider>

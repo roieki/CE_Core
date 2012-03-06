@@ -91,7 +91,7 @@ ob_start();
 				//getUserCategories($_GET['userid']);
 			?>
 			<table>
-				<?php getCombinedCategories($_GET['userid']); ?>
+				<?php getCombinedTags($_GET['userid']); ?>
 			</table>	
 		</div>
         <div id="fb-root">
@@ -233,7 +233,7 @@ ob_start();
 <?php
 
 
-function getUserCategories($user_id){
+function getUserTags($user_id){
 	global $mysqli;
     $_SESSION['user_id'] = $user_id;
     $cookie_user_forums = getCreateCombinedCookie($user_id);
@@ -273,7 +273,7 @@ function getUserCategories($user_id){
 
 }
 
-function getCombinedCategories($user_id){
+function getCombinedTags($user_id){
 	global $mysqli;
     $cookie_user_forums = getCreateCombinedCookie($user_id);
     $cookie_user_forums = getCreateCombinedCookie($user_id);

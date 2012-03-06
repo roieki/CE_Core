@@ -203,5 +203,23 @@ function update_external_mapping($forum_id,$tag_id,$external_name,$tableName=nul
     else return false;
 }
 
+function getFacebookCategories(){
+    global $mysqli;
+    $query = "select * from fb_categories";
+    $result = $mysqli->query($query);
+    while ($row = $result->fetch_assoc()){
+        $entry['id'] = $row['id'];
+        $entry['value'] = $row['value'];
+        $categories[] = $entry;
+    }
+    echo json_encode($categories);
+}
+
+function update_tag_facebook_category($tag_id,$fb_category){
+    global $mysqli;
+    $query = "insert ignore into internal_tags_fb_categories_mapping values (".$tag_id.",".$fb_category.",0)";
+    $result = $mysqli->query($query);
+
+}
 
 ?>
